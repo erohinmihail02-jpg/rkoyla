@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Task Builder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Interactive Task Builder</div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="index.html">Все задания</a>
+        <a href="builder.html">Создать</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <h1>Интерактивные задания</h1>
+        <p>Создавайте, выполняйте и проверяйте учебные упражнения.</p>
+
+        <a href="builder.html" class="main-button">
+            + Создать задание
+        </a>
+    </section>
+
+    <section class="controls">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Поиск задания..."
+        >
+
+        <select id="typeFilter">
+            <option value="all">Все типы</option>
+            <option value="test">Один ответ</option>
+            <option value="multiple">Несколько ответов</option>
+            <option value="matching">Сопоставление</option>
+            <option value="sequence">Последовательность</option>
+            <option value="category">Распределение</option>
+            <option value="fill">Пропуски</option>
+        </select>
+
+        <select id="difficultyFilter">
+            <option value="all">Любая сложность</option>
+            <option value="Легко">Легко</option>
+            <option value="Средне">Средне</option>
+            <option value="Сложно">Сложно</option>
+        </select>
+
+    </section>
+
+    <section>
+        <h2>Задания</h2>
+
+        <div id="tasksContainer" class="tasks-container"></div>
+    </section>
+
+</main>
+
+<script src="js/tasks.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

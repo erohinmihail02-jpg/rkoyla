@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Создание задания</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Interactive Task Builder
+    </div>
+
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="builder.html">Создать</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="builder">
+
+        <h1>Создать задание</h1>
+
+        <label>Тип задания</label>
+
+        <select id="taskType">
+
+            <option value="test">
+                Один правильный ответ
+            </option>
+
+            <option value="multiple">
+                Несколько правильных ответов
+            </option>
+
+            <option value="matching">
+                Сопоставление
+            </option>
+
+            <option value="sequence">
+                Последовательность
+            </option>
+
+            <option value="category">
+                Распределение
+            </option>
+
+            <option value="fill">
+                Заполнение пропусков
+            </option>
+
+        </select>
+
+
+        <label>Название задания</label>
+
+        <input
+            type="text"
+            id="taskTitle"
+            placeholder="Например: Основы JavaScript"
+        >
+
+
+        <label>Сложность</label>
+
+        <select id="taskDifficulty">
+
+            <option value="Легко">Легко</option>
+            <option value="Средне">Средне</option>
+            <option value="Сложно">Сложно</option>
+
+        </select>
+
+
+        <label>Инструкция</label>
+
+        <textarea
+            id="taskInstruction"
+            placeholder="Например: Выберите правильный ответ"
+        ></textarea>
+
+
+        <div id="editor"></div>
+
+
+        <div class="buttons">
+
+            <button id="previewButton">
+                Предпросмотр
+            </button>
+
+            <button id="saveButton" class="main-button">
+                Сохранить
+            </button>
+
+        </div>
+
+
+        <div id="preview" class="preview"></div>
+
+    </section>
+
+</main>
+
+
+<script src="js/tasks.js"></script>
+<script src="js/builder.js"></script>
+
+</body>
+</html>
